@@ -41,13 +41,199 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Code\ResourceLoader.cs" />
+     <Compile Include="Assets\Code\Installers\BootstrapInstaller.cs" />
+     <Compile Include="Assets\Code\Installers\ProjectInstaller.cs" />
+     <Compile Include="Assets\Code\LoadingScreenController.cs" />
+     <Compile Include="Assets\Code\UI\ProgressBarCircle.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+     <Compile Include="Assets\Code\Bootstrapper.cs" />
+     <Compile Include="Assets\Code\UI\ProgressBar.cs" />
      <Folder Include="Assets" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\MetalTrim" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Leaves" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Railing\Materials" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Building" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Tire\Materials" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\fireExtinguisher\Materials" />
+     <Folder Include="Assets\Settings\AddressableAssetsData\AssetGroups\Schemas" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Material_Grunge" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\MainBuilding\Materials" />
      <Folder Include="Assets\Settings" />
+     <Folder Include="Assets\Code" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Pipe3" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\plasticBarrel\Materials" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <Folder Include="Assets\TextMesh Pro\Sprites" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\plasticBarrel" />
+     <Folder Include="Assets\ProgressBar" />
+     <Folder Include="Assets\ProgressBar\Script" />
      <Folder Include="Assets\Scenes" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Trunk" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Lut" />
+     <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Tilemetal6" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Pipe2" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Pipe3" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Foliage\Trees" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Tilemetal" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Moss" />
+     <Folder Include="Assets\Resources" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Building5" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Steel" />
+     <Folder Include="Assets\Settings\AddressableAssetsData\AssetGroups" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Gravel" />
+     <Folder Include="Assets\Prefabs" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\GasTireBarrel" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Tilemetal3" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Decal" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Silo" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Foliage\Bush" />
+     <Folder Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Branch" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+     <Folder Include="Assets\Content\AbandonedFactory\Profiles" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Rustmetal" />
+     <Folder Include="Assets\TextMesh Pro\Resources" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\WoodenPallet\Materials" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Pipe2\Materials" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Foliage\Ivy" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Gascylender" />
+     <Folder Include="Assets\Settings\AddressableAssetsData\Windows" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Ladder" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Tilemetal7" />
+     <Folder Include="Assets\Settings\AddressableAssetsData" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Mud" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\WoodenPallet" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Leaves\Materials" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Foliage\Grass" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Railing" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Barrel" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Overview" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Rocks" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Pipe2" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\CableSpool" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Jersry" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Gascylender\Materials" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Overview\Materials" />
+     <Folder Include="Assets\TextMesh Pro" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Tilemetal2" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Pipe3\Materials" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Tilemetal4" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Door" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\TileRust" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Asphalt2" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Ladder\Materials" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\ConeBarier" />
+     <Folder Include="Assets\Settings\AddressableAssetsData\DataBuilders" />
+     <Folder Include="Assets\Code\Installers" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Tilemetal\Rusty" />
+     <Folder Include="Assets\ProgressBar\Sprites" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Barrel\Materials" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Barrel" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Leaf_dcal" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Building4\Materials" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\BrokenAsphalt" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Foliage" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Tilemetal\Normal" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\fireHydrant\Materials" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Particles" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Foliage" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Building5\Materials" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Building4" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+     <Folder Include="Assets\Prefabs\Ui" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Asphalt" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Materials\Buildings" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Materials\Particles" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\ConcreteFloor_Column" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\CableSpool\Materials" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\ConcreteFloor_Column\Materials" />
+     <Folder Include="Assets\TextMesh Pro\Shaders" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Materials\Decals" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Trashcan\Materials" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\CableSpool" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Pipe_Bridge\Materials" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Foliage\Trees\Materials" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\MainBuilding" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Wall" />
+     <Folder Include="Assets\Content\AbandonedFactory" />
+     <Folder Include="Assets\TextMesh Pro\Resources\Style Sheets" />
      <Folder Include="Assets\TutorialInfo\Scripts" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Moss\Materials" />
+     <Folder Include="Assets\TextMesh Pro\Fonts" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\ConeBarier\Materials" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Concrete" />
+     <Folder Include="Assets\Settings\AddressableAssetsData\AssetGroupTemplates" />
      <Folder Include="Assets\TutorialInfo\Icons" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Tire" />
      <Folder Include="Assets\TutorialInfo" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\fireHydrant" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\fireHydrant" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Rocks\Materials" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Glass" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Prefabs" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Materials\Props" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Jersry" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Terrain" />
+     <Folder Include="Assets\Code\UI" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\ShaderGraphs" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Building\Materials" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Jersry\Materials" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\fireExtinguisher" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Material_Textures" />
+     <Folder Include="Assets\Content" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Grass" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Foliage\Grass\Materials" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Moss" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Grid\Materials" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\MetalPlane\Materials" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Grid" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\DamagedConcrete" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Tilemetal\Mid" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Pipe\Materials" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Building2" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Masks" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Pipe" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Materials\Foliages" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Pipe" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Silo\Materials" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Trashcan" />
+     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Foliage\Ivy\Materials" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\PlaneMask" />
+     <Folder Include="Assets\TextMesh Pro\Documentation" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Pipe_Bridge" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\MetalPlane" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Materials" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Ivy" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Tilemetal5" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Building2\Materials" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\WoodenPallet" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Particles" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Foliage\Bush\Materials" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+     <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Wall\Materials" />
      <Reference Include="UnityEngine">
      <HintPath>C:\MyPrograms\Unity\2022.1.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -296,6 +482,9 @@
      </Reference>
      <Reference Include="UnityEditor.UnityConnectModule">
      <HintPath>C:\MyPrograms\Unity\2022.1.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
+     </Reference>
+     <Reference Include="Zenject-usage">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Unsafe">
      <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\PackageCache\com.unity.burst@1.7.4\Unity.Burst.Unsafe.dll</HintPath>
@@ -696,59 +885,32 @@
      <Reference Include="System.Xml.Serialization">
      <HintPath>C:\MyPrograms\Unity\2022.1.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.Flow.Editor">
-     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.VSCode.Editor">
      <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Shaders">
      <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+     <Reference Include="UnityEditor.CacheServer">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\UnityEditor.CacheServer.dll</HintPath>
      </Reference>
-     <Reference Include="PPv2URPConverters">
-     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
+     <Reference Include="Unity.Addressables">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.Addressables.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualStudio.Editor">
-     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Timeline">
-     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Core.Editor">
-     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.TextMeshPro">
-     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.VisualScripting.State.Editor">
      <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Burst.Editor">
-     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Searcher.Editor">
      <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.RenderPipelines.Core.Runtime">
-     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
      <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
-     </Reference>
      <Reference Include="UnityEditor.UI">
      <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.PlasticSCM.Editor">
-     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Rider.Editor">
      <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
@@ -759,17 +921,68 @@
      <Reference Include="UnityEngine.UI">
      <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.ShaderGraph.Editor">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Toolchain.Win-x86_64-Linux-x86_64">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.Toolchain.Win-x86_64-Linux-x86_64.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Mathematics.Editor">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Addressables.Editor">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.Addressables.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Flow.Editor">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="PPv2URPConverters">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualStudio.Editor">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Sysroot.Linux_x86_64">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.Sysroot.Linux_x86_64.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Timeline">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Core.Editor">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TextMeshPro">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Editor">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.Runtime">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ResourceManager">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.ResourceManager.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Flow">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.PlasticSCM.Editor">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Services.Core">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.Core">
      <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Mathematics">
      <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.ShaderGraph.Editor">
-     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Services.Core">
-     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core.Analytics">
      <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
@@ -789,14 +1002,14 @@
      <Reference Include="Unity.Timeline.Editor">
      <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
      <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Mathematics.Editor">
-     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+     <Reference Include="Unity.ScriptableBuildPipeline">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ScriptableBuildPipeline.Editor">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Core.Editor">
      <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
@@ -804,8 +1017,19 @@
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.SysrootPackage.Editor">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.SysrootPackage.Editor.dll</HintPath>
+     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Zenject-Editor.csproj">
+      <Project>{ebcf15b9-cd7d-8bf7-5c0c-0e57f72cfda9}</Project>
+      <Name>Zenject-Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject.csproj">
+      <Project>{aa4a6535-c972-1704-ec19-9364564fadbe}</Project>
+      <Name>Zenject</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

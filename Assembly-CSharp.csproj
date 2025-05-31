@@ -41,14 +41,12 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Code\ResourceLoader.cs" />
      <Compile Include="Assets\Code\Installers\BootstrapInstaller.cs" />
-     <Compile Include="Assets\Code\Installers\ProjectInstaller.cs" />
-     <Compile Include="Assets\Code\LoadingScreenController.cs" />
+     <Compile Include="Assets\Code\UI\RemoteAssetsLoadingScreen.cs" />
      <Compile Include="Assets\Code\UI\ProgressBarCircle.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
-     <Compile Include="Assets\Code\Bootstrapper.cs" />
      <Compile Include="Assets\Code\UI\ProgressBar.cs" />
+     <Compile Include="Assets\Code\RemoteAssetsLoad\RemoteAssetsLoadManager.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\MetalTrim" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Leaves" />
@@ -67,8 +65,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <Folder Include="Assets\TextMesh Pro\Sprites" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\plasticBarrel" />
-     <Folder Include="Assets\ProgressBar" />
-     <Folder Include="Assets\ProgressBar\Script" />
+     <Folder Include="Assets\Content\ProgressBar" />
      <Folder Include="Assets\Scenes" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Trunk" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Lut" />
@@ -83,6 +80,7 @@
      <Folder Include="Assets\Resources" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Building5" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Steel" />
+     <Folder Include="Assets\LeartesStudios\AbandonedFactory\HDRP" />
      <Folder Include="Assets\Settings\AddressableAssetsData\AssetGroups" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Gravel" />
      <Folder Include="Assets\Prefabs" />
@@ -116,6 +114,7 @@
      <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Overview" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Rocks" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Pipe2" />
+     <Folder Include="Assets\AddressableAssetsData" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\CableSpool" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Jersry" />
@@ -134,7 +133,7 @@
      <Folder Include="Assets\Settings\AddressableAssetsData\DataBuilders" />
      <Folder Include="Assets\Code\Installers" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Tilemetal\Rusty" />
-     <Folder Include="Assets\ProgressBar\Sprites" />
+     <Folder Include="Assets\Content\AbandonedFactory\Settings" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Barrel\Materials" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Barrel" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Leaf_dcal" />
@@ -155,6 +154,7 @@
      <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Building4" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <Folder Include="Assets\Prefabs\Ui" />
+     <Folder Include="Assets\LeartesStudios\AbandonedFactory" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Asphalt" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Materials\Buildings" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Materials\Particles" />
@@ -187,6 +187,7 @@
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Glass" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Prefabs" />
+     <Folder Include="Assets\LeartesStudios\AbandonedFactory\HDRP\Scene" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Materials\Props" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Jersry" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Terrain" />
@@ -202,11 +203,13 @@
      <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Grass" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Foliage\Grass\Materials" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Moss" />
+     <Folder Include="Assets\AddressableAssetsData\Windows" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Grid\Materials" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\MetalPlane\Materials" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Grid" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\DamagedConcrete" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+     <Folder Include="Assets\Code\RemoteAssetsLoad" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Tilemetal\Mid" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Pipe\Materials" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
@@ -232,6 +235,8 @@
      <Folder Include="Assets\Content\AbandonedFactory\Art\Particles" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Foliage\Bush\Materials" />
+     <Folder Include="Assets\LeartesStudios" />
+     <None Include="Assets\Settings\AddressableAssetsData\link.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Wall\Materials" />
      <Reference Include="UnityEngine">
@@ -1019,6 +1024,21 @@
      </Reference>
      <Reference Include="Unity.SysrootPackage.Editor">
      <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\Unity.SysrootPackage.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UniTask.Addressables">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\UniTask.Addressables.dll</HintPath>
+     </Reference>
+     <Reference Include="UniTask.DOTween">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\UniTask.DOTween.dll</HintPath>
+     </Reference>
+     <Reference Include="UniTask">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\UniTask.dll</HintPath>
+     </Reference>
+     <Reference Include="UniTask.TextMeshPro">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\UniTask.TextMeshPro.dll</HintPath>
+     </Reference>
+     <Reference Include="UniTask.Linq">
+     <HintPath>C:\Users\krolo\Desktop\Work\DarkTimesRepo\Library\ScriptAssemblies\UniTask.Linq.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

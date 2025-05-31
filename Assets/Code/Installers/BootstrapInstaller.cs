@@ -1,4 +1,4 @@
-using Code.UI;
+using Code.RemoteAssetsLoad;
 using UnityEngine;
 using Zenject;
 

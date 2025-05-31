@@ -4,50 +4,53 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
-public class RemoteAssetsLoadManager
+namespace Code.RemoteAssetsLoad
 {
-    public event Action<float> LoadingProgressChanged;
-    private string _labelToLoad = "RemoteResources";
-    
-    public RemoteAssetsLoadManager()
+    public class RemoteAssetsLoadManager
     {
-        LoadRemoteContentAsync(_labelToLoad).Forget();
-    }
+        public event Action<float> LoadingProgressChanged;
+        private string _labelToLoad = "RemoteResources";
     
-    private async UniTask LoadRemoteContentAsync(string label)
-    {
-        var sizeHandle = Addressables.GetDownloadSizeAsync(label);
-        await sizeHandle.ToUniTask();
-
-        if (sizeHandle.Status != AsyncOperationStatus.Succeeded)
+        public RemoteAssetsLoadManager()
         {
-            Debug.LogError("Failed to get download size.");
-            return;
+            LoadRemoteContentAsync(_labelToLoad).Forget();
         }
-
-        if (sizeHandle.Result == 0)
+    
+        private async UniTask LoadRemoteContentAsync(string label)
         {
-            Debug.LogError("Download size = 0");
-            return;
-        }
+            var sizeHandle = Addressables.GetDownloadSizeAsync(label);
+            await sizeHandle.ToUniTask();
 
-        var downloadHandle = Addressables.DownloadDependenciesAsync(label);
-        while (!downloadHandle.IsDone)
-        {
-            LoadingProgressChanged?.Invoke(downloadHandle.PercentComplete * 100);
-            await UniTask.Yield();
-        }
+            if (sizeHandle.Status != AsyncOperationStatus.Succeeded)
+            {
+                Debug.LogError("Failed to get download size.");
+                return;
+            }
 
-        await downloadHandle.ToUniTask();
+            if (sizeHandle.Result == 0)
+            {
+                Debug.LogError("Download size = 0");
+                return;
+            }
 
-        switch (downloadHandle.Status)
-        {
-            case AsyncOperationStatus.Failed:
-                Debug.LogError("Download failed!");
-                break;
-            case AsyncOperationStatus.Succeeded:
+            var downloadHandle = Addressables.DownloadDependenciesAsync(label);
+            while (!downloadHandle.IsDone)
+            {
                 LoadingProgressChanged?.Invoke(downloadHandle.PercentComplete * 100);
-                break;
+                await UniTask.Yield();
+            }
+
+            await downloadHandle.ToUniTask();
+
+            switch (downloadHandle.Status)
+            {
+                case AsyncOperationStatus.Failed:
+                    Debug.LogError("Download failed!");
+                    break;
+                case AsyncOperationStatus.Succeeded:
+                    LoadingProgressChanged?.Invoke(downloadHandle.PercentComplete * 100);
+                    break;
+            }
         }
     }
 }

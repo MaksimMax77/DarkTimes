@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using Zenject;
 
-namespace Code.UI
+namespace Code.RemoteAssetsLoad
 {
     public class RemoteAssetsLoadingScreen : MonoBehaviour, IDisposable
     {

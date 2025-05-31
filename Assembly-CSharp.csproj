@@ -42,7 +42,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Code\Installers\BootstrapInstaller.cs" />
-     <Compile Include="Assets\Code\UI\RemoteAssetsLoadingScreen.cs" />
+     <Compile Include="Assets\Code\RemoteAssetsLoad\RemoteAssetsLoadingScreen.cs" />
      <Compile Include="Assets\Code\UI\ProgressBarCircle.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\Code\UI\ProgressBar.cs" />
@@ -236,7 +236,6 @@
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Foliage\Bush\Materials" />
      <Folder Include="Assets\LeartesStudios" />
-     <None Include="Assets\Settings\AddressableAssetsData\link.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Wall\Materials" />
      <Reference Include="UnityEngine">

@@ -47,7 +47,6 @@
   <ItemGroup>
      <Compile Include="Assets\Code\AssetsLoad\Info\RemoteAssetsDownloaderInfo.cs" />
      <Compile Include="Assets\Code\Error\ErrorControl.cs" />
-     <Compile Include="Assets\Code\UI\Views\View.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\Code\AssetsLoad\SceneLoader.cs" />
      <Compile Include="Assets\Code\Error\ErrorView.cs" />
@@ -56,10 +55,8 @@
      <Compile Include="Assets\Code\Loading\LoadingView.cs" />
      <Compile Include="Assets\Code\AssetsLoad\Info\SceneLoaderInfo.cs" />
      <Compile Include="Assets\Code\Installers\BootstrapInstaller.cs" />
-     <Compile Include="Assets\Code\UI\Views\ErrorBlock.cs" />
      <Compile Include="Assets\Code\Installers\ProjectContextInstaller.cs" />
      <Compile Include="Assets\Code\AssetsLoad\RemoteAssetsDownloader.cs" />
-     <Compile Include="Assets\Code\UI\Views\ProgressBlock.cs" />
      <Compile Include="Assets\Code\Bootstrap\Bootstrapper.cs" />
      <Compile Include="Assets\Code\AssetsLoad\Info\LoadInfo.cs" />
      <Compile Include="Assets\Code\Loading\LoadingsControl.cs" />
@@ -205,13 +202,11 @@
      <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Rocks\Materials" />
      <Folder Include="Assets\AddressableAssetsData\Android" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-     <Folder Include="Assets\Code\UI\Views" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Textures\Glass" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Prefabs" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Materials\Props" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Jersry" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Terrain" />
-     <Folder Include="Assets\Code\UI" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\ShaderGraphs" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Building\Materials" />
      <Folder Include="Assets\Content\AbandonedFactory\Art\Meshes\Jersry\Materials" />

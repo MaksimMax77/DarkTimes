@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4210612634333465251}
   - component: {fileID: 8042971665835314567}
+  - component: {fileID: -3565311536196031097}
   m_Layer: 0
   m_Name: ProjectContext
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8042971665835314567
 MonoBehaviour:
@@ -45,7 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scriptableObjectInstallers: []
-  _monoInstallers: []
+  _monoInstallers:
+  - {fileID: -3565311536196031097}
   _installerPrefabs: []
   _parentNewObjectsUnderContext: 1
   _editorReflectionBakingCoverageMode: 0
@@ -60,3 +62,20 @@ MonoBehaviour:
       _missingHandlerDefaultResponse: 2
       _requireStrictUnsubscribe: 0
       _defaultAsyncTickPriority: 1
+--- !u!114 &-3565311536196031097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614304408752784581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af723802c5b9f5b4ab70b1e1db67ebd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _loadingView: {fileID: 4361828096175544757, guid: ea993d62dad290544ac0c4ce29ba428b,
+    type: 3}
+  _remoteAssetsDownloaderInfo: {fileID: 11400000, guid: da3f45b3a3f2a71498cb2bebc2cf300e,
+    type: 2}
+  _sceneLoaderInfo: {fileID: 11400000, guid: c765e121c4223b442af112051d82e99a, type: 2}

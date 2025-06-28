@@ -11,11 +11,13 @@ namespace Code.AssetsLoad
     {
         public event Action<string> OnError;
         public event Action<float> OnProgressChanged;
+        private string _errorMessage;
         
         public string Description { get; set; }
 
         public RemoteAssetsDownloader(RemoteAssetsDownloaderInfo info)
         {
+            _errorMessage = info.ErrorMessage;
             Description = info.Description;
         }
 
@@ -34,7 +36,7 @@ namespace Code.AssetsLoad
             }
             catch (Exception)
             {
-                OnError?.Invoke("Download dependencies failed");
+                OnError?.Invoke(_errorMessage);
             }
             finally
             {
@@ -68,7 +70,7 @@ namespace Code.AssetsLoad
             catch (Exception)
             {
                 status = AsyncOperationStatus.Failed;
-                OnError?.Invoke("Download dependencies failed");
+                OnError?.Invoke(_errorMessage);
             }
             finally
             {

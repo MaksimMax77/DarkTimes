@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: SceneLoaderInfo
   m_EditorClassIdentifier: 
   _description: Scene load
+  _errorMessage: Scene loading error

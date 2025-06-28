@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: RemoteAssetsDownloaderInfo
   m_EditorClassIdentifier: 
   _description: Downloading resources
+  _errorMessage: Error downloading resources

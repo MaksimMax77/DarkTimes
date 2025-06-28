@@ -12,11 +12,13 @@ namespace Code.AssetsLoad
     {
         public event Action<float> OnProgressChanged;
         public event Action<string> OnError;
+        private string _errorMessage;
 
         public string Description { get; set; }
 
         public SceneLoader(SceneLoaderInfo sceneLoaderInfo)
         {
+            _errorMessage = sceneLoaderInfo.ErrorMessage;
             Description = sceneLoaderInfo.Description;
         }
         
@@ -31,10 +33,10 @@ namespace Code.AssetsLoad
                     handle.Task.AsUniTask().SuppressCancellationThrow()
                 );
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                OnError?.Invoke(ex.Message);
-                throw new Exception("Загрузка сцены завершилась с ошибкой.");
+                OnError?.Invoke(_errorMessage);
+                /*throw new Exception("Загрузка сцены завершилась с ошибкой.");*/
             }
         }
         

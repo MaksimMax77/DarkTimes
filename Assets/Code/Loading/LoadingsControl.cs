@@ -1,23 +1,23 @@
+using System;
 using System.Collections.Generic;
-using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace Code.Loading
 {
-    public class LoadingsControl
-    {
-        private LoadingView _loadingViewPrefab;
+    public class LoadingsControl : IDisposable
+    { 
         private LoadingView _loadingView;
         private Queue<Loading> _loadings = new();
 
-        public LoadingsControl(LoadingView loadingViewPrefab)
+        public void SetLoadingView(LoadingView loadingView)
         {
-            _loadingViewPrefab = loadingViewPrefab;
+            _loadingView = loadingView;
+            Object.DontDestroyOnLoad(_loadingView);
         }
 
         public void CreateLoadingsAndStartLoad(List<ILoadableItem> loadableItems)
         {
             RemoveAllLoadings();
-            TryCreateViewInstance();
 
             for (int i = 0; i < loadableItems.Count; i++)
             {
@@ -39,18 +39,7 @@ namespace Code.Loading
 
             _loadings.Clear();
         }
-
-        private void TryCreateViewInstance()
-        {
-            if (_loadingView != null)
-            {
-                return;
-            }
-
-            _loadingView = Object.Instantiate(_loadingViewPrefab);
-            Object.DontDestroyOnLoad(_loadingView);
-        }
-
+        
         private void OnLoadEnd()
         {
             var loading = _loadings.Dequeue();
@@ -66,6 +55,14 @@ namespace Code.Loading
             var nextLoading = _loadings.Peek();
             nextLoading.OnLoadEnd += OnLoadEnd;
             nextLoading.StartLoading();
+        }
+
+        public void Dispose()
+        {
+            foreach (var loading in _loadings)
+            {
+                loading.OnLoadEnd -= OnLoadEnd;
+            }
         }
     }
 }

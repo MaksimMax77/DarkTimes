@@ -1,5 +1,6 @@
 using System;
 using Code.AssetsLoad.Info;
+using Code.Error;
 using Code.Loading;
 using Cysharp.Threading.Tasks;
 using UnityEngine.AddressableAssets;
@@ -7,7 +8,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 namespace Code.AssetsLoad
 {
-    public class RemoteAssetsDownloader : ILoadableItem
+    public class RemoteAssetsDownloader : ILoadableItem, IObjectWithError
     {
         public event Action<string> OnError;
         public event Action<float> OnProgressChanged;

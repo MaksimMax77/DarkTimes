@@ -19,7 +19,7 @@ namespace Code.Loading
         {
             Destroy(gameObject, _destroyTime);
         }
-
+        
         public void SetTargetProgress(float progress)
         {
             _targetProgress = progress;

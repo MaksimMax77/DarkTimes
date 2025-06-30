@@ -1,5 +1,6 @@
 ﻿using System;
 using Code.AssetsLoad.Info;
+using Code.Error;
 using Code.Loading;
 using Cysharp.Threading.Tasks;
 using UnityEngine.AddressableAssets;
@@ -8,7 +9,7 @@ using UnityEngine.ResourceManagement.ResourceProviders;
 
 namespace Code.AssetsLoad
 {
-    public class SceneLoader : ILoadableItem
+    public class SceneLoader : ILoadableItem, IObjectWithError
     {
         public event Action<float> OnProgressChanged;
         public event Action<string> OnError;

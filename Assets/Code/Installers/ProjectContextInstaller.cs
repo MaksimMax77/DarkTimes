@@ -8,7 +8,6 @@ namespace Code.Installers
 {
     public class ProjectContextInstaller : MonoInstaller
     {
-        [SerializeField] private LoadingView _loadingView;
         [SerializeField] private RemoteAssetsDownloaderInfo _remoteAssetsDownloaderInfo;
         [SerializeField] private SceneLoaderInfo _sceneLoaderInfo;
 
@@ -18,7 +17,6 @@ namespace Code.Installers
             Container.BindInstance(_sceneLoaderInfo).AsSingle();
             Container.BindInterfacesAndSelfTo<RemoteAssetsDownloader>().AsSingle();
             Container.BindInterfacesAndSelfTo<SceneLoader>().AsSingle();
-            Container.Bind<LoadingView>().FromInstance(_loadingView).AsSingle();
             Container.BindInterfacesAndSelfTo<LoadingsControl>().AsSingle();
         }
     }

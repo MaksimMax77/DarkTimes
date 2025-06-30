@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\Code\AssetsLoad\Info\RemoteAssetsDownloaderInfo.cs" />
      <Compile Include="Assets\Code\Error\ErrorControl.cs" />
+     <Compile Include="Assets\Code\Error\IObjectWithError.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\Code\AssetsLoad\SceneLoader.cs" />
      <Compile Include="Assets\Code\Error\ErrorView.cs" />

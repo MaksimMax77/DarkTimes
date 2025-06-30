@@ -9,12 +9,11 @@ namespace Code.Installers
     {
         [SerializeField] private Bootstrapper _bootstrapper;
         [SerializeField] private ErrorView _errorView;
-        private ErrorControl _errorControl;
 
         public override void InstallBindings()
         {
             Container.Bind<ErrorView>().FromInstance(_errorView).AsSingle();
-            Container.Bind<ErrorControl>().AsSingle();
+            Container.Bind<ErrorControl>().AsSingle().NonLazy();
             Container.Bind<Bootstrapper>().FromInstance(_bootstrapper).AsSingle().NonLazy();
         }
     }

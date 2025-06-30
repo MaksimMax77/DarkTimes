@@ -13,6 +13,7 @@ namespace Code.Bootstrap
     {
         [SerializeField] private string _labelToLoad = "RemoteResources";
         [SerializeField] private string _mainSceneName = "MainMenu";
+        [SerializeField] private LoadingView _loadingView;
         [Inject] private RemoteAssetsDownloader _remoteAssetsDownloader;
         [Inject] private SceneLoader _sceneLoader;
         [Inject] private LoadingsControl _loadingsControl;
@@ -20,28 +21,14 @@ namespace Code.Bootstrap
         
         private async UniTaskVoid Start()
         {
-            _remoteAssetsDownloader.OnError += ShowError;
-            _sceneLoader.OnError += ShowError;
+            _loadingsControl.SetLoadingView(_loadingView);
             _errorControl.RestartClicked += OnRestartClicked;
             await DownloadResourcesAndLoadMain();
         }
 
         private void OnDestroy()
         {
-            _remoteAssetsDownloader.OnError -= ShowError;
-            _sceneLoader.OnError -= ShowError;
             _errorControl.RestartClicked -= OnRestartClicked;
-        }
-
-        private void ShowError(string message)
-        {
-            _errorControl.ShowError(message);
-        }
-        
-        private async void OnRestartClicked()
-        {
-            _errorControl.Close();
-            await DownloadResourcesAndLoadMain();
         }
 
         private async UniTask DownloadResourcesAndLoadMain()
@@ -55,7 +42,7 @@ namespace Code.Bootstrap
                     _remoteAssetsDownloader,
                     _sceneLoader
                 });
-                
+
                 var loadRemoteContentStatus = await _remoteAssetsDownloader.LoadRemoteContentAsync(_labelToLoad);
 
                 if (loadRemoteContentStatus == AsyncOperationStatus.Succeeded)
@@ -69,6 +56,7 @@ namespace Code.Bootstrap
                 {
                     _sceneLoader
                 });
+                
                 await LoadMainScene();
             }
         }
@@ -76,6 +64,11 @@ namespace Code.Bootstrap
         private async UniTask LoadMainScene()
         {
             await _sceneLoader.LoadSceneAsync(_mainSceneName);
+        }
+
+        private async void OnRestartClicked()
+        {
+            await DownloadResourcesAndLoadMain();
         }
     }
 }

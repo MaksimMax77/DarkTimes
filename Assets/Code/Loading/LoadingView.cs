@@ -42,7 +42,7 @@ namespace Code.Loading
             {
                 if (_progressFill.value < _targetProgress)
                 {
-                    _progressFill.value += Time.deltaTime * _fillSpeed;
+                    _progressFill.value += UnityEngine.Time.deltaTime * _fillSpeed;
                 }
                 yield return null;
             }
